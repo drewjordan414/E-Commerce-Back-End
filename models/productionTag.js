@@ -1,6 +1,6 @@
 // housekeeping 
 const {Model , DataTypes} = require('sequelize');
-const sequelize = require('/config/connection.js');
+const sequelize = require('/config/connection');
 const { Product, ProductTag } = require('.');
 
 // Create our production model
