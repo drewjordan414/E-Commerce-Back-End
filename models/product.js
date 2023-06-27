@@ -2,9 +2,10 @@
 const {Model , DataTypes} = require('sequelize');
 const sequelize = require('/config/connection.js');
 
-// Create our Category model
-class Category extends Model {}
-Category.init(
+// initialize product model (table) by extending off Sequelize's Model class
+class Product extends Model {}
+// set up fields and rules for Product model
+Product.init(
     {
         // define columns
         id: {
@@ -19,12 +20,15 @@ Category.init(
         },
     },
     {
+        // pass in our imported sequelize connection (the direct connection to our database)
         sequelize,
+        // don't automatically create createdAt/updatedAt timestamp fields
         timestamps: false,
+        // don't pluralize name of database table
         freezeTableName: true,
+        // use underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
         underscored: true,
-        modelName: 'category'
-    },
-) 
-
-module.exports = Category;
+        // make it so our model name stays lowercase in the database
+        modelName: 'product'
+    }
+);
