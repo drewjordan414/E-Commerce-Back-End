@@ -1,10 +1,10 @@
 // housekeeping 
 const {Model , DataTypes} = require('sequelize');
 const sequelize = require('/config/connection.js');
-const { Product } = require('.');
+const { Product, ProductTag } = require('.');
 
 // Create our Category model
-class Category extends Model {}
+class ProductTag extends Model {}
 Product.init(
     {
         // define columns
@@ -27,3 +27,5 @@ Product.init(
         modelName: 'category'
     }
 );
+
+module.exports = ProductTag;
