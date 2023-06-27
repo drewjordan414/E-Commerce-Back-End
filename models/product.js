@@ -1,6 +1,6 @@
 // housekeeping 
 const {Model , DataTypes} = require('sequelize');
-const sequelize = require('/config/connection.js');
+const sequelize = require('/config/connection');
 
 // initialize product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
