@@ -3,7 +3,7 @@ const {Model , DataTypes} = require('sequelize');
 const sequelize = require('/config/connection.js');
 const { Product, ProductTag } = require('.');
 
-// Create our Category model
+// Create our production model
 class ProductTag extends Model {}
 Product.init(
     {
@@ -24,7 +24,7 @@ Product.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'category'
+        modelName: 'productTag'
     }
 );
 
