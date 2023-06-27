@@ -1,7 +1,8 @@
 // housekeeping
-require('dotenv').config();
+// require('dotenv').config();
+// const Sequelize = require('sequelize');
 const express = require('express');
-const sequelize = require('./config')
+const sequelize = require('./config/connection');
 const routes = require('./routes/api');
 
 const app = express();
