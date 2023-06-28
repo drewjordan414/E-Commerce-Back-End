@@ -1,7 +1,6 @@
 // housekeeping 
-const {Model , DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
-
+const {Model , DataTypes} = require('sequelize');
 // Create our Tag model
 class Tag extends Model {}
 Tag.init(
