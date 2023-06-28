@@ -1,6 +1,6 @@
 // housekeeping 
 const Product = require('./product');
-const Category = require('./category');
+const Category = require('./Category');
 const Tag = require('./tag');
 const ProductTag = require('./productTag');
 const { BelongsTo } = require('sequelize');
