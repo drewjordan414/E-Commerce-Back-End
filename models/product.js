@@ -25,7 +25,6 @@ Product.init(
           isDecimal: true
         }
       },
-    //   set up stock as integer, default value 10
       stock: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -34,7 +33,6 @@ Product.init(
           isNumeric: true
         }
       },
-    // category id set up as foreign key
       category_id: {
         type: DataTypes.INTEGER,
         references : {
@@ -43,7 +41,6 @@ Product.init(
         }
       }
     },
-    // configure metadata, including naming conventions
     {
       sequelize,
       timestamps: false,
