@@ -1,16 +1,16 @@
 // housekeeping 
-const Product = require('./product');
-const Category = require('./category');
+const Product = require('./Product');
+const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
-// const { BelongsTo } = require('sequelize');
+const { BelongsToMany } = require('sequelize');
 
 // Products belongsTo Category
 Product.belongsTo(Category, {
     foreignKey: 'category_id',
     onDelete: 'CASCADE'
 });
-console.log(Product);
+
 
 // Categories have many Products
 Category.hasMany(Product, {
