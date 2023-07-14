@@ -1,5 +1,7 @@
+// housekeeping importing the tag model 
 const { Tag } = require('../models');
 
+// tag data 
 const tagData = [
   {
     tag_name: 'rock music',
@@ -27,6 +29,7 @@ const tagData = [
   },
 ];
 
+// seed tags 
 const seedTags = () => Tag.bulkCreate(tagData);
 
 module.exports = seedTags;
